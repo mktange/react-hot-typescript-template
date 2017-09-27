@@ -1,0 +1,32 @@
+{
+  "name": "react-hot-typescript-template",
+  "version": "0.0.1",
+  "description": "Template for getting started with React v16, ReactHotLoader v3, Webpack v3 and TypeScript",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "@types/html-webpack-plugin": "^2.28.0",
+    "@types/node": "^8.0.31",
+    "@types/react": "^16.0.7",
+    "@types/react-dom": "^15.5.4",
+    "@types/react-hot-loader": "^3.0.4",
+    "@types/webpack": "^3.0.12",
+    "@types/webpack-env": "^1.13.1",
+    "awesome-typescript-loader": "^3.2.3",
+    "react-hot-loader": "^3.0.0-beta.7",
+    "source-map-loader": "^0.2.1",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.5.3",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
+  },
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
+  }
+}
