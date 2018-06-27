@@ -1,10 +1,10 @@
 import * as webpack from "webpack";
 import * as path from "path";
-import * as HtmlWebpackPlugin from 'html-webpack-plugin';
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const config: webpack.Configuration = {
+    mode: "development",
     entry: [
-        "react-hot-loader/patch",
         "./src/index.tsx",
     ],
     output: {
@@ -19,20 +19,21 @@ const config: webpack.Configuration = {
     },
 
     plugins: [
+        new HtmlWebpackPlugin({
+            title: "React and TypeScript"
+        }),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
     ],
 
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.tsx?$/,
-                loaders: [
-                    "react-hot-loader/webpack",
-                    "awesome-typescript-loader"
-                ],
-                exclude: path.resolve(__dirname, 'node_modules'),
-                include: path.resolve(__dirname, 'src'),
+                loader: "ts-loader",
+                options: {
+                    transpileOnly: true
+                }
             },
             
             {
